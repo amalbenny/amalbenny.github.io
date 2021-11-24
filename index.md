@@ -4,4 +4,4 @@
 Repos
 - Java
 ```
-Link [Java Collection](https://amalbenny.github.io/java/)
+Link [Java Collection](https://amalbenny.github.io/Java/)
