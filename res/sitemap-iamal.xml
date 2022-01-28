@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://iamal.mooo.com/</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2022-01-28</lastmod>    
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://iamal.mooo.com/python-pro/</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://iamal.mooo.com/web-mark/</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://iamal.mooo.com/web-mark/accessories/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>
