@@ -1,5 +1,5 @@
 <link rel="stylesheet" type="text/css" href="https://iamal.mooo.com/web-mark/stylesheet.css">
-<wm><nav><a href="/"><img src="/res/home.png" height="25px" /></a><a style="color:black;"> Attributes/license agreements page</a></nav></wm>
+<wm><nav><a href="//iamal.mooo.com"><img src="/res/home.png" height="25px" /></a><a style="color:black;"> Attributes/license agreements page</a></nav></wm>
    
 ## Attributes
 Following details will explain Attributes of license agreements
