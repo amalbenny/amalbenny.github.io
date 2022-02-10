@@ -8,7 +8,7 @@ For example Check following listing included in error reporting button in 404 er
 <p id="name"></p>
 
 - Version 
-<p class="version"></p>
+<p id="version"></p>
 
 - Error facing URL
 
@@ -38,7 +38,7 @@ function isBrave() {
 }
 
 if(isBrave){
-    browserName = "'Brave' based on chromium";
+    browserName = "Brave (chromium based)";
 }
 browserName += " Browser";
 var version = navigator.appVersion;
