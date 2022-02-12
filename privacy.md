@@ -1,9 +1,12 @@
 # Privacy Policy
 We respect your privacy and your freedom to choose right. So
 we won't collect any personal identifiable information without your 
-permission. If you need to share any of your data like browser/device informations
-incase of reporting we will definitely help to know what's sharing and not.
-For example Check following listing included in error reporting button in 404 error pages.
+acknowledgements and fullpermission.
+## Collected data
+ If you need to share any of your data like browser/device informations
+incase of reporting we will definitely help to you understand what's sharing and not.
+### In 404 reporting button
+ Check following information listing included in error reporting button located at 404 error pages.
 - Browser Name
 <p id="name"></p>
 
