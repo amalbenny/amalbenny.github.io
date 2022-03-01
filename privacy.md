@@ -41,7 +41,7 @@ function isBrave() {
 }
 
 if(isBrave){
-    browserName = "Brave (chromium based)";
+    browserName += " || Contains Brave Version";
 }
 browserName += " Browser";
 var version = navigator.appVersion;
