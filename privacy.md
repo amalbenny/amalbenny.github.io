@@ -1,4 +1,4 @@
-# Privacy Policy
+# Privacy Policy <img src="/res/shield.gif" height="40px">
 We respect your privacy and your freedom to choose right. So
 we won't collect any personal identifiable information without your 
 acknowledgements and fullpermission.
