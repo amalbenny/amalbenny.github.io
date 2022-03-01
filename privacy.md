@@ -28,6 +28,8 @@ var browserName = (function (agent) {        switch (true) {
             default: return "other";
         }
     })(window.navigator.userAgent.toLowerCase());
+browserName += " Browser";
+
 function isBrave() {
   if (window.navigator.brave != undefined) {
     if (window.navigator.brave.isBrave.name == "isBrave") {
@@ -41,14 +43,13 @@ function isBrave() {
 }
 
 if(isBrave){
-    browserName += " || Contains Brave Version";
+    browserName+= " || Contains Brave Version";
 }
-browserName += " Browser";
 var version = navigator.appVersion;
 
 //load
 
-document.getElementById("name").innerHTML = "browser: "+ browserName;
-document.getElementById("version").innerHTML = "Supported Versions: " + version;
+document.getElementById("name").innerHTML = browserName;
+document.getElementById("version").innerHTML = version;
 
 </script>
