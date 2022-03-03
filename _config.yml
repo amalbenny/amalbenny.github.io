@@ -1,1 +1,19 @@
+description: > # this means to ignore newlines until "show_excerpts:"
+  projects that specifically designed for innovate the technologyies and make everything Open-source
+
+show_excerpts: false # set to true to show excerpts on the homepage
+
+# Minima date format
+# refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
+minima:
+  date_format: "%b %-d, %Y"
+
+
+   social_links:
+         twitter: amalb1883
+         github:  amalbenny
+         linkedin: amal-benny
+         gitlab:
+         - username: amalbenny
+  
 theme: jekyll-theme-architect
