@@ -1,6 +1,11 @@
 theme: jekyll-theme-architect
+
 logo: /res/iamal_144.png
 title: iamal
+tagline: iamal | constructing a new world of possibilities which brake up switching restrictions over various series of devices
+twitter:
+  username: amalb1883
+
 remote_theme: amalbenny/iamal-template@iv0.1.0
 plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
