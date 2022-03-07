@@ -1,4 +1,5 @@
 theme: jekyll-theme-architect
+logo: /res/iamal_144.png
 title: iamal
 remote_theme: amalbenny/iamal-template@iv0.1.0
 plugins:
