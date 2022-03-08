@@ -6,6 +6,6 @@ tagline: iamal | constructing a new world of possibilities which brake up switch
 twitter:
   username: amalb1883
 
-remote_theme: amalbenny/iamal-template@iv0.1.0
+remote_theme: amalbenny/iamal-template@iv0.1.1
 plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
