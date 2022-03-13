@@ -39,8 +39,7 @@ table {
 <wm><nav><a href="//iamal.mooo.com"><img src="/res/home.png" height="25px" /></a><a style="color:black;"> Attributes/license agreements page</a></nav></wm>
    
 ## Attributes
-Following details will explain Attributes of license agreements
-used in this website.
+Following details will explain third party services that we used to provide better experience for you.
 
 <table class="zigzag">
   <thead>
