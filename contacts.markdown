@@ -10,16 +10,16 @@ I’m happy to hear from you — whether it’s feedback, a question about a pro
 
 ### Email
 
-{% raw %}{% if site.email %}{% endraw %}
+{% if site.email %}
 <a href="mailto:{{ site.email }}">{{ site.email }}</a>
-{% raw %}{% else %}{% endraw %}
+{% else %}
 I don't have a public email configured. To add one, open `_config.yml` and add a line like:
 
 ```
 email: yourname@example.com
 ```
 
-{% raw %}{% endif %}{% endraw %}
+{% endif %}
 
 ### Quick Contact Form
 
