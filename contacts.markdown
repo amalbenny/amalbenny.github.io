@@ -23,7 +23,7 @@ email: yourname@example.com
 
 ### Quick Contact Form
 
-<iframe aria-label='Contact Us' frameborder="0" style="height:1024px;width:99%;border:none;" src='https://forms.zohopublic.in/amalb1883gm1/form/ContactUs/formperma/5jxNFivG3MWvTMCcixaeGWQXdUbGYGH672aQn3QBcXw'></iframe>
+<iframe aria-label='Contact Us' frameborder="0" style="height:1024px;width:100%;border:none;" src='https://forms.zohopublic.in/amalb1883gm1/form/ContactUs/formperma/5jxNFivG3MWvTMCcixaeGWQXdUbGYGH672aQn3QBcXw'></iframe>
 
 
 ### Social & Other Links
