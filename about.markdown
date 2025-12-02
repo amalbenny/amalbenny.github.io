@@ -5,5 +5,5 @@ permalink: /about/
 ---
 
 <script>
-        window.location.href = "//alyod.tech/assets/documents/resume";
+        window.location.href = "/assets/documents/resume";
 </script>

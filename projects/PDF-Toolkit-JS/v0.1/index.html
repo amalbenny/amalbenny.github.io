@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Toolkit | ALYOD.TECH</title>
+    <script src="/assets/script/jQuery.min.js"></script>
+    <link rel="stylesheet" href="/assets/css/all.min.css">
+    <script src="/assets/script/pdf_toolkit_alyod.js"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .card {
+            background-color: white;
+            width: 100%;
+            max-width: 600px;
+            padding: 40px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #2c3e50;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 18px;
+            letter-spacing: 4px;
+            margin-bottom: 40px;
+            font-weight: normal;
+        }
+
+        .menu-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 40px 0;
+        }
+
+        .menu-list li {
+            margin: 15px 0;
+        }
+
+        .menu-btn {
+            display: block;
+            text-decoration: none;
+            background-color: #ecf0f1;
+            color: #2c3e50;
+            padding: 15px;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .menu-btn:hover {
+            background-color: #bdc3c7;
+        }
+
+        .content {
+            display: block;
+            text-decoration: none;
+            background-color: #ecf0f1;
+            color: #2c3e50;
+            padding: 15px;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        .content:hover {
+            background-color: #bdc3c7;
+        }
+
+        .footer-links {
+            font-size: 12px;
+            color: #95a5a6;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: #95a5a6;
+            font-weight: bold;
+        }
+
+        .footer-links a:hover {
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>PDF Toolkit JS</h1>
+        <h2><a href="https://alyod.tech/" target="_blank" style="text-decoration:none; color:#7f8c8d;">ALYOD.TECH</a></h2>
+        <div id="content">
+            <ul class="menu-list">
+                <li><a id="merge" class="menu-btn">MERGE PDFs</a></li>
+                <li><a id="split" class="menu-btn">SPLIT PDFs</a></li>
+            </ul>
+        </div>
+        <br/>
+        <div class="footer-links">
+            <a id="help">HELP AND GUIDE</a>
+            <a id="about">ABOUT</a>
+        </div>
+    </div>
+<script>
+    let $help=`
+        <div class="content">
+            sdqsgddsqdhjksv <br/>
+            sahdswjdsf <br/>
+            dkashsdgsj <br/>
+            <br/>
+            <b><a href="" style="text-decoration:none; color:#2c3e50;">Refresh <i class="fa-solid fa-refresh"></i></a></b> the window to reset the page
+        </div>
+        `
+    let $about=`
+        <div class="content">
+            Software:
+                <strong>PDF Toolkit JS</strong> <br/>
+            Version:
+                <strong>v0.1</strong> <br/>
+            Host:
+                <strong>ALYOD.TECH</strong> <br/><br/>
+            Contributer(s):
+                <strong>Amal Benny</strong> <br/>
+        </div>`
+
+
+    $(function(){
+        $("#help").on("click",function(){
+            $("#content").html($help);
+        });
+
+        $("#about").on("click",function(){
+            $("#content").html($about);
+        });
+        
+        /* Extract Content For Functions */
+        $("#merge").on("click",function(){
+            $("#content").load("merge/load.html");
+        });
+        $("#split").on("click",function(){
+            $("#content").load("split/load.html");
+        });
+    });
+</script>
+</body>
+</html>
