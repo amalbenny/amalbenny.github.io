@@ -1,6 +1,6 @@
 
 ---
-layout: page
+layout: base
 title: Contacts
 permalink: /contacts/
 ---
