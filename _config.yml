@@ -24,8 +24,16 @@ description: >- # this means to ignore newlines until "baseurl:"
   This website helps you browse through my lifetime works/projects and achievements in IT, Mechanical, and Servise Sectors.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://alyod.tech" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: amalb1883
-github_username:  amalbenny
+
+social_media:
+  twitter: "amalb1883"
+  github: "amalbenny"
+  linkedin: "amal-benny"
+  instagram: "amalb1883"
+  youtube: "@amalbenny"
+  telegram: "amalb1883"
+
+
 
 # Build settings
 theme: minima

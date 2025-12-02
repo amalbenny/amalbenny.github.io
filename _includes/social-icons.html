@@ -1,0 +1,64 @@
+<!-- _includes/social-icons.html -->
+<ul class="social-list">
+  {% if site.social_media.twitter %}
+    <li>
+      <a href="twitter.com{{ site.social_media.twitter }}" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  {% endif %}
+  {% if site.social_media.github %}
+    <li>
+      <a href="github.com{{ site.social_media.github }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  {% endif %}
+  {% if site.social_media.linkedin %}
+    <li>
+      <a href="www.linkedin.com{{ site.social_media.linkedin }}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+  {% endif %}
+  {% if site.social_media.instagram %}
+    <li>
+      <a href="instagram.com{{ site.social_media.instagram }}" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </li>
+  {% endif %}
+  {% if site.social_media.youtube %}
+    <li>
+      <!-- Note: YouTube profile links often need special handling depending on whether it's a @handle or a channel ID -->
+      <a href="www.youtube.com{{ site.social_media.youtube }}" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </li>
+  {% endif %}
+  {% if site.social_media.telegram %}
+    <li>
+      <a href="t.me{{ site.social_media.telegram }}" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+        <i class="fab fa-telegram-plane"></i>
+      </a>
+    </li>
+  {% endif %}
+</ul>
+
+<style>
+/* Optional basic CSS for better display */
+.social-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+.social-list a {
+    color: #333; /* Change color as needed */
+    font-size: 24px; /* Change size as needed */
+    text-decoration: none;
+}
+.social-list a:hover {
+    color: #000;
+}
+</style>
