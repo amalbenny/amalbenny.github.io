@@ -3,7 +3,9 @@
 /* Major CSS properties */
     html {
         scroll-behavior: smooth;
+
     }
+
     body{
         line-height: 1.6;
         font-size: 16px;
@@ -13,18 +15,25 @@
                     radial-gradient(1200px 800px at 10% 110%,rgba(34, 211, 238, 0.225), transparent), #0b0b10;
         background-attachment: fixed;
         color:#e8e8f2;
+
     }
+
     img {
         max-width: 100%;
         display: block;
+
     }
+
     a {
         color: #e8e8f2;
         text-decoration: none;
         font-weight: bold;
+
     }
+
     p {
         text-indent: 0.5in; /* Sets a half-inch indentation for the first line of all paragraphs */
+
     }
 
 /*Content Section*/
@@ -36,25 +45,33 @@
         padding-left: 1rem;
         padding-right: 1rem;
         box-sizing: border-box;
+
     }
+
     .center{
         justify-items: center;
         align-items: center;
         text-align: center;
+
     }
+
 /* Create 4 Columns next to each other*/
     .grid-wrapper-list-3{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 3rem;
+
     }
+    
     @media screen and (max-width:800px){
         .grid-wrapper-list-3{
             grid-template-columns: 1fr 1fr;
+
         }
     }
     @media screen and (max-width:600px){
         .grid-wrapper-list-3{
             grid-template-columns: 1fr;
+
         }
     }

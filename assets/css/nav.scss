@@ -10,7 +10,9 @@
         backdrop-filter: blur(10px);
         background: rgba(10, 10, 15, 0.55);
         border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
     }
+
     nav.navbar a{
         float: right;
         display: block;
@@ -19,20 +21,29 @@
         text-decoration: none;
         font-size: 1.1rem;
         color: #e8e8f2;
+
     }
+
     nav.navbar a.imp{
         font-weight: 600;
+
     }
+
     nav.navbar a:hover{
         background-color: rgb( 256, 256, 256);
         color: rgb(0, 0, 0);
+
     }
+
     nav.navbar a.active{
         background-color: mediumpurple;
         color:midnightblue;
+
     }
+
     nav.navbar .icon{
         display: none;
+
     }
 
     /*For Different Devices*/
@@ -40,9 +51,11 @@
         nav.navbar a:not(:first-child){
             display: none;
         }
+        
         nav.navbar a.icon{
             float: left;
             display: block;
+
         }
     }
     /* If the User trigger JS for toggleFn()*/
@@ -52,10 +65,12 @@
             position: absolute;
             left: 0;
             top: 0;
+
         }
         nav.navbar.responsive a{
             float: none;
             display:block;
             text-align: right;
+
         }
     }
