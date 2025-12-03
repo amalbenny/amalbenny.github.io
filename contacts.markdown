@@ -35,4 +35,5 @@ Here are all my social profiles. Feel free to reach out!
 ### Privacy
 
 We respect your privacy concerns, and appreciate your trust in us.
-Messages sent via email or third-party forms will only be used to reply to you (aside from improving our services) and will not be shared.
+Messages sent via email will only be used to reply to you ( aside from improving our services ) and will not be shared.<br/>
+As for the Form, you can take a look at Zoho Forms <a target="_blank" href="https://www.zoho.com/privacy.html">Privacy Policy</a> and <a target="_blank" href="https://www.zoho.com/forms/terms.html">Terms Of Services</a> to understand the data processing.
