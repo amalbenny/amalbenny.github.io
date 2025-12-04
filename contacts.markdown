@@ -11,7 +11,7 @@ I’m happy to hear from you — whether it’s feedback, a question about a pro
 ### Email
 
 {% if site.email %}
-<a href="mailto:{{ site.email }}"><i class="fa-regular fa-envelope"></i> {{ site.email }}</a>
+<a href="mailto:{{ site.email }}"> {{ site.email }} <i class="fa-regular fa-envelope"></i></a>
 {% else %}
 I don't have a public email configured. To add one, open `_config.yml` and add a line like:
 
