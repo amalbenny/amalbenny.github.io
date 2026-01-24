@@ -2,5 +2,6 @@
 layout: base
 ---
 # Projects Catalogue
-    1. [Project- Python PDF Merger](/projects/)
-    2. [Project- ](/projects/)
+
+- [Project- Python PDF Merger](https://github.com/amalbenny/PDF_Merger)
+- [Project-  Semester Level TimeTable](/clg-timetable)
