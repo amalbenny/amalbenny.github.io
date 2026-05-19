@@ -1,199 +1,423 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-	<title>Resume | Amal Benny</title>
-	<meta name="generator" content="LibreOffice 24.2.7.2 (Linux)"/>
-	<meta name="created" content="2025-11-06T11:07:27.615518715"/>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@1,300..600&display=swap" rel="stylesheet">
-	<style type="text/css">
-		@page { size: 8.27in 11.69in; margin: 0.7in 0 }
-		body{ display: flex; overflow: auto;
-			  font-family: "Roboto Ann", "Noto Sans", sans-serif; font-optical-sizing: auto; font-weight: 300; font-style: italic;
-			  font-variation-settings: "wdth" 100;
-			}
-		b{ font-weight:600; }
-		p { line-height: 120%; margin-bottom: 0.1in; background: transparent }
-		h1 { margin-bottom: 0.08in; background: transparent; page-break-after: avoid }
-		h1.western { font-family: "Liberation Sans", sans-serif; font-size: 18pt; font-weight: bold }
-		h3 { color: #808080; margin-top: 0.1in; margin-bottom: 0.08in; background: transparent; page-break-after: avoid }
-		h3.western { font-family: "Liberation Sans", sans-serif; font-size: 14pt; font-weight: bold }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Resume of Amal Benny – Mechanical Engineering student, Google Product Expert, and tech enthusiast." />
+  <title>Amal Benny — Resume</title>
 
-		/* Custom CSS */
-		.side-bar{ width: 25%; height: 100vh; box-sizing: border-box; margin-left: 0.1in; }
-		main{ flex: 1; box-sizing: border-box; margin-left: 10px; }
-		.grid-list-wrapper-3{
-			display: grid;
-			grid-template-columns: 1fr 1fr 1fr; /* 1/3 fraction + 1/3 fraction + 1/3 fraction */
-		}
-		/* Ends Here */
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
 
-        .profile-pic {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%; /* Makes the image circular */
-        border: 5px solid #ccc; /* Adds a border */
-        object-fit: cover; /* Ensures the image fits within the circle */
-        }
-	</style>
+  <style>
+    /* ── Reset & tokens ───────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:      #1a1814;
+      --muted:    #6b6560;
+      --rule:     #d4cfc9;
+      --accent:   #c1440e;
+      --bg:       #faf8f5;
+      --sidebar:  #f0ece6;
+      --font-serif: "DM Serif Display", Georgia, serif;
+      --font-sans:  "DM Sans", system-ui, sans-serif;
+      --gap: 2rem;
+    }
+
+    html { font-size: 15px; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      font-weight: 300;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+
+    /* ── Page shell ───────────────────────────── */
+    .page {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      max-width: 900px;
+      margin: 2rem auto;
+      background: #fff;
+      box-shadow: 0 4px 32px rgba(0,0,0,.08);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    /* ── Sidebar ──────────────────────────────── */
+    aside {
+      background: var(--sidebar);
+      padding: 2.5rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+      border-right: 1px solid var(--rule);
+    }
+
+    .profile-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      text-align: center;
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--accent);
+    }
+
+    /* Fallback avatar when image is absent */
+    .profile-fallback {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #d4cfc9, #bbb5ae);
+      border: 3px solid var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      color: #fff;
+      letter-spacing: -.02em;
+      flex-shrink: 0;
+    }
+
+    .name {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      line-height: 1.15;
+      color: var(--ink);
+    }
+
+    .sidebar-section { display: flex; flex-direction: column; gap: .4rem; }
+
+    .sidebar-label {
+      font-size: .65rem;
+      font-weight: 500;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: .2rem;
+    }
+
+    .sidebar-section address {
+      font-style: normal;
+      font-size: .82rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .sidebar-section p {
+      font-size: .82rem;
+      color: var(--muted);
+    }
+
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .4rem;
+    }
+
+    .skill-tag {
+      background: var(--bg);
+      border: 1px solid var(--rule);
+      border-radius: 2px;
+      padding: .18rem .55rem;
+      font-size: .72rem;
+      color: var(--ink);
+      font-weight: 400;
+    }
+
+    /* ── Main content ─────────────────────────── */
+    main {
+      padding: 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    /* ── Section titles ───────────────────────── */
+    section > h2 {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--muted);
+      letter-spacing: .02em;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: .35rem;
+      margin-bottom: 1rem;
+    }
+
+    /* ── Entry rows ───────────────────────────── */
+    .entry { margin-bottom: 1.2rem; }
+    .entry:last-child { margin-bottom: 0; }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: .25rem;
+      margin-bottom: .15rem;
+    }
+
+    .entry-title {
+      font-weight: 500;
+      font-size: .92rem;
+      color: var(--ink);
+    }
+
+    .entry-org {
+      font-size: .82rem;
+      color: var(--muted);
+    }
+
+    .entry-date {
+      font-size: .78rem;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .entry ul {
+      padding-left: 1.1rem;
+      margin-top: .4rem;
+      display: flex;
+      flex-direction: column;
+      gap: .3rem;
+    }
+
+    .entry ul li {
+      font-size: .83rem;
+      color: #3a3530;
+      line-height: 1.55;
+    }
+
+    /* ── Achievements two-column grid ─────────── */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .75rem 1.5rem;
+    }
+
+    .cert-item { display: flex; flex-direction: column; gap: .1rem; }
+
+    .cert-name {
+      font-weight: 500;
+      font-size: .83rem;
+      color: var(--ink);
+    }
+
+    .cert-meta {
+      font-size: .75rem;
+      color: var(--muted);
+    }
+
+    /* ── Print / narrow ───────────────────────── */
+    @media (max-width: 700px) {
+      .page {
+        grid-template-columns: 1fr;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+      }
+      aside { border-right: none; border-bottom: 1px solid var(--rule); }
+      .cert-grid { grid-template-columns: 1fr; }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .page { box-shadow: none; margin: 0; max-width: 100%; border-radius: 0; }
+    }
+  </style>
 </head>
-	<body lang="en" link="#000080" vlink="#800000" dir="ltr">
 
-	<aside class="side-bar">
-		<h1 class="western">
-        <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
-		Amal Benny</h1>
-		<p><font color="#666666"><b>Velloor (H)<br/>
-		Kalaketty,<br/>
-		Kottayam
-		- 686508</b></font></p>
-		<p><font color="#666666"><a href="tel:+917012009357">(+91) 701 200 9357</a><br/>
-		</font></p>
-		<p><font color="#666666"><b>Email: </b><a style="text-decoration: none;" href="mailto:amalb1883@gmail.com">amalb1883@gmail.com</a><br/>
-		<b>Website:</b>
-		<a href="https://alyod.tech/" style="text-decoration: none;" target="_blank" rel="noopener noreferrer">alyod.tech</a>
-        <b>LinkedIn:</b>
-        <a href="https://linkedin.com/in/amal-benny" target="_blank" rel="noopener noreferrer">in/amal-benny</a></font></p>
-        
-	</aside>
+<body>
+  <div class="page">
 
-	<main><br/><br/>
-		<h3 class="western" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0.02in 0in">
-		Education</h3>
-		
-		<p><b>B. Tech in Mechanical Engineering</b><span style="font-weight: normal"><br/>
-		A.P.J.
-		A.K.T.U. Kerala, </span><span style="font-weight: normal">June 2026</span></p>
-		
-		<p><b>High School </b><span style="font-weight: normal"><br/>
-		A.M. H.S.S Kalaketty </span><span style="font-weight: normal">April 2020</span></p>
-		
-		<p><b>Higher Secondary</b><span style="font-weight: normal"><br/>
-		A.M. H.S.S Kalaketty </span><span style="font-weight: normal">April 2022</span></p>
-		<br/>
-		
-		<h3 class="western" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0.02in 0in">
-		Experience</h3>
-		<br/>
+    <!-- ── Sidebar ── -->
+    <aside>
+      <div class="profile-wrap">
+        <!-- Shows fallback initials if profile.jpg is unavailable -->
+        <img
+          src="profile.jpg"
+          alt="Amal Benny"
+          class="profile-pic"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        />
+        <div class="profile-fallback" style="display:none;" aria-hidden="true">AB</div>
+        <h1 class="name">Amal<br/>Benny</h1>
+      </div>
 
-		<div id="Section1" dir="ltr" gutter="0" style="column-count: 2"><p align="left">
-			<b>Google Product Expert<br/>
-		</b><span style="font-weight: normal">Google Chrome Community</span></p><br/>
-			<p style="font-weight: normal">Feb 2021 – Dec 2022 <br> Sep 2024 - Dec 2025
-			</p>
-		</div>
-		<ul>
-			<li><p style="font-weight: normal">As  part of a growing community
-			of Product Experts – made up of superusers who are passionate
-			about Google Products and helping others using my knowledge of
-			Google Products to educate and support users from all over the
-			world. 
-			</div>
-			<li><p style="font-weight: normal">Provide feedback to Google on how
-			to improve their products, helping to make them even more – user
-			friendly.</div>
-		</ul>
-		<br/>
+      <div class="sidebar-section">
+        <p class="sidebar-label">Address</p>
+        <address>
+          Velloor (H), Kalaketty,<br/>
+          Kottayam – 686508
+        </address>
+      </div>
 
-		<div id="Section2" dir="ltr" gutter="0" style="column-count: 2"><p align="left">
-			<b>ASME EFx Volunteer</b><u><b><br/>
-		</b></u><span style="font-weight: normal">American
-			Society of Mechanical Engineers ( ASME )</span></p><br/>
-			<p style="font-weight: normal">Sep 2024</p>
-		</div>
-		<ul>
-			<li><p style="font-weight: normal"> I am truly delighted to have
-			been part of the ASME EFx Fest as a volunteer, held at S.J.C.E.T.
-			Palai on September 28th.</div>
-			<li><p style="font-weight: normal">It was a fantastic opportunity to
-			connect with a brilliant minds, each showcasing unique
-			problem-solving skills and innovative thinking. The creativity and
-			potential on display were truly inspiring.</div>
-		</ul>
-		<br/>
+      <div class="sidebar-section">
+        <p class="sidebar-label">Contact</p>
+        <p><a href="tel:+917012009357">(+91) 701 200 9357</a></p>
+        <p><a href="mailto:amalb1883@gmail.com">amalb1883@gmail.com</a></p>
+        <p><a href="https://alyod.tech/" target="_blank" rel="noopener noreferrer">alyod.tech</a></p>
+        <p><a href="https://linkedin.com/in/amal-benny" target="_blank" rel="noopener noreferrer">linkedin.com/in/amal-benny</a></p>
+      </div>
 
-		<div id="Section3" dir="ltr" gutter="0" style="column-count: 2"><p align="left">
-			<b>Asthra Volunteer<br/>
-		</b><span style="font-weight: normal">Asthra 8.0</span></p><br/>
-			<p style="font-weight: normal">Mar 2024 
-			</p>
-		</div>
-		<ul>
-			<li><p style="font-weight: normal">As  part of volunteer team in regitration
-			for Asthra 8.0, a National level annual technical fest held at S.J.C.E.T. Palai.
-			</div>
-		</ul>
-		<br/>
+      <div class="sidebar-section">
+        <p class="sidebar-label">Skills</p>
+        <div class="skills-grid" role="list">
+          <span class="skill-tag" role="listitem">CAD</span>
+          <span class="skill-tag" role="listitem">Python 3</span>
+          <span class="skill-tag" role="listitem">C Language</span>
+          <span class="skill-tag" role="listitem">Web Design</span>
+          <span class="skill-tag" role="listitem">Critical Thinking</span>
+          <span class="skill-tag" role="listitem">Adaptive Learning</span>
+          <span class="skill-tag" role="listitem">Community Service</span>
+          <span class="skill-tag" role="listitem">Empathy</span>
+          <span class="skill-tag" role="listitem">Discipline</span>
+        </div>
+      </div>
+    </aside>
 
-		<div id="Section4" dir="ltr" gutter="0" style="column-count: 2"><p align="left">
-			<b>Asthra Volunteer<br/>
-		</b><span style="font-weight: normal">Asthra 10.0</span></p><br/>
-			<p style="font-weight: normal">Sep 2025
-			</p>
-		</div>
-		<ul>
-			<li><p style="font-weight: normal">Contributed to the successful execution
-				of Asthra 10.0 workshop on SolidWorks, focusing on CAD based prototype
-				design and mechaincal visualisation.
-			</div>
-		</ul>
-		<br/>
-		<h3 class="western" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0.02in 0in">Achievements and Certifications</h3>
+    <!-- ── Main ── -->
+    <main>
 
-		<div id="Section5" dir="ltr" gutter="0" style="column-count: 2"><p align="left">
-			<b>Google PE Silver Badge Recognition<br/></b>
-			<span style="font-weight: normal">Google Chrome Community</span></p><br/>
-			<p style="font-weight: normal"></p>
-		</div><br/>
-		
-		<div id="Section6" dir="ltr" gutter="0" style="column-count: 2"><p align="left">
-			<b>Prototype design using SolidWorks<br/></b>
-			<span style="font-weight: normal">Asthra 7.0</span></p><br/>
-			<p style="font-weight: normal">Dec 2022</p>
-		</div><br/>
-		<div id="Section7" dir="ltr" gutter="0" style="column-count: 2"><p align="left">
-			<b>Course: Python Intermediate<br/></b>
-			<span style="font-weight: normal">Sololearn</span></p><br/>
-			<p style="font-weight: normal">Jan 2024</p>
-		</div>
-		<br/>
-		<div id="Section8" dir="ltr" gutter="0" style="column-count: 2"><p align="left">
-			<b>Course: Introduction to C<br/></b>
-			<span style="font-weight: normal">Sololearn</span></p><br/>
-			<p style="font-weight: normal">May 2023</p>
-		</div><br/>
-		
-		<div id="Section9" dir="ltr" gutter="0" style="column-count: 2"><p align="left">
-			<b>Course: Responsive Web Designing<br/></b>
-			<span style="font-weight: normal">Sololearn</span></p><br/>
-			<p style="font-weight: normal">Feb 2023</p>
-		</div><br>
+      <!-- Education -->
+      <section aria-labelledby="edu-heading">
+        <h2 id="edu-heading">Education</h2>
 
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-title">B.Tech in Mechanical Engineering</span>
+            <span class="entry-date">June 2026</span>
+          </div>
+          <p class="entry-org">A.P.J. A.K.T.U. Kerala</p>
+        </div>
 
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-title">Higher Secondary</span>
+            <span class="entry-date">April 2022</span>
+          </div>
+          <p class="entry-org">A.M. H.S.S Kalaketty</p>
+        </div>
 
-		<div id="Section10" dir="ltr" gutter="0" style="column-count: 2"><p align="left">
-			<b>Course: Introduction to Programming in Kotlin<br/></b>
-			<span style="font-weight: normal">Google for Developers</span></p><br/>
-			<p style="font-weight: normal">Mar 2023</p>
-		</div><br>
-		
-		<h3 class="western" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0.02in 0in">
-		Skills</h3>
-		<div id="Section11">
-			<div class="grid-list-wrapper-3">
-				<div class="grid-list">CAD</div>
-				<div class="grid-list">Python 3</div>
-				<div class="grid-list">C Language</div>
-				<div class="grid-list">Web Designing</div>
-				<div class="grid-list">Critical Thinking</div>
-				<div class="grid-list">Adaptive Learning</div>
-				<div class="grid-list">Community Service</div>
-				<div class="grid-list">Empathy</div>
-				<div class="grid-list">Discipline</div>
-			</div>
-		</div>
-		<br/><br/>
-	</main>
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-title">High School</span>
+            <span class="entry-date">April 2020</span>
+          </div>
+          <p class="entry-org">A.M. H.S.S Kalaketty</p>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section aria-labelledby="exp-heading">
+        <h2 id="exp-heading">Experience</h2>
+
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-title">Google Product Expert</span>
+            <span class="entry-date">Feb 2021 – Dec 2022 &nbsp;·&nbsp; Sep 2024 – Dec 2025</span>
+          </div>
+          <p class="entry-org">Google Chrome Community</p>
+          <ul>
+            <li>Part of a community of Product Experts — passionate superusers who educate and support Google product users worldwide.</li>
+            <li>Provided structured feedback to Google to improve product usability and user experience.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-title">ASME EFx Volunteer</span>
+            <span class="entry-date">Sep 2024</span>
+          </div>
+          <p class="entry-org">American Society of Mechanical Engineers (ASME)</p>
+          <ul>
+            <li>Volunteered at the ASME EFx Fest held at S.J.C.E.T. Palai on September 28th.</li>
+            <li>Engaged with participants showcasing innovative problem-solving and engineering creativity.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-title">Asthra Volunteer — Registration Team</span>
+            <span class="entry-date">Mar 2024</span>
+          </div>
+          <p class="entry-org">Asthra 8.0, S.J.C.E.T. Palai</p>
+          <ul>
+            <li>Supported the registration desk at Asthra 8.0, a national-level annual technical fest.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-title">Asthra Volunteer — SolidWorks Workshop</span>
+            <span class="entry-date">Sep 2025</span>
+          </div>
+          <p class="entry-org">Asthra 10.0, S.J.C.E.T. Palai</p>
+          <ul>
+            <li>Contributed to the SolidWorks workshop focused on CAD-based prototype design and mechanical visualisation.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Achievements & Certifications -->
+      <section aria-labelledby="cert-heading">
+        <h2 id="cert-heading">Achievements &amp; Certifications</h2>
+        <div class="cert-grid">
+
+          <div class="cert-item">
+            <span class="cert-name">Google PE Silver Badge</span>
+            <span class="cert-meta">Google Chrome Community</span>
+          </div>
+
+          <div class="cert-item">
+            <span class="cert-name">Prototype Design using SolidWorks</span>
+            <span class="cert-meta">Asthra 7.0 · Dec 2022</span>
+          </div>
+
+          <div class="cert-item">
+            <span class="cert-name">Python Intermediate</span>
+            <span class="cert-meta">Sololearn · Jan 2024</span>
+          </div>
+
+          <div class="cert-item">
+            <span class="cert-name">Introduction to C</span>
+            <span class="cert-meta">Sololearn · May 2023</span>
+          </div>
+
+          <div class="cert-item">
+            <span class="cert-name">Responsive Web Design</span>
+            <span class="cert-meta">Sololearn · Feb 2023</span>
+          </div>
+
+          <div class="cert-item">
+            <span class="cert-name">Introduction to Kotlin</span>
+            <span class="cert-meta">Google for Developers · Mar 2023</span>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+  </div>
 </body>
 </html>
