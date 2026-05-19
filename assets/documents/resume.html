@@ -9,7 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  
   <style>
     /* ── Reset & tokens ───────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -18,11 +19,12 @@
       --ink:      #1a1814;
       --muted:    #6b6560;
       --rule:     #d4cfc9;
-      --accent:   #c1440e;
+      --accent:   #2c5282; /* Deep steel blue for an industrial feel */
       --bg:       #faf8f5;
       --sidebar:  #f0ece6;
       --font-serif: "DM Serif Display", Georgia, serif;
       --font-sans:  "DM Sans", system-ui, sans-serif;
+      --font-mono:  "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
       --gap: 2rem;
     }
 
@@ -78,7 +80,16 @@
       height: 120px;
       border-radius: 50%;
       object-fit: cover;
-      border: 3px solid var(--accent);
+      /* Dual-ring effect with shadow for better contrast */
+      border: 3px solid #fff;
+      outline: 3px solid var(--accent);
+      outline-offset: -1px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+    }
+    
+    .profile-pic:hover {
+      transform: scale(1.03);
     }
 
     /* Fallback avatar when image is absent */
@@ -87,7 +98,8 @@
       height: 120px;
       border-radius: 50%;
       background: linear-gradient(135deg, #d4cfc9, #bbb5ae);
-      border: 3px solid var(--accent);
+      border: 3px solid #fff;
+      outline: 3px solid var(--accent);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -128,20 +140,36 @@
       color: var(--muted);
     }
 
+    /* Icon Alignment fix */
+    .sidebar-section p a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .bi { margin: 0; }
+
     .skills-grid {
       display: flex;
       flex-wrap: wrap;
-      gap: .4rem;
+      gap: .5rem;
     }
 
     .skill-tag {
       background: var(--bg);
       border: 1px solid var(--rule);
-      border-radius: 2px;
-      padding: .18rem .55rem;
-      font-size: .72rem;
+      border-radius: 4px;
+      padding: .25rem .6rem;
+      font-size: .75rem;
       color: var(--ink);
       font-weight: 400;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      cursor: default;
+    }
+
+    .skill-tag:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+      border-color: var(--accent);
     }
 
     /* ── Main content ─────────────────────────── */
@@ -152,8 +180,16 @@
       gap: 2rem;
     }
 
-    /* ── Section titles ───────────────────────── */
+    /* ── Section titles & Gear Animation ──────── */
+    @keyframes spin {
+      100% { transform: rotate(360deg); }
+    }
+
     section > h2 {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
       font-family: var(--font-serif);
       font-style: italic;
       font-size: 1.05rem;
@@ -161,11 +197,26 @@
       letter-spacing: .02em;
       border-bottom: 1px solid var(--rule);
       padding-bottom: .35rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.2rem;
+    }
+
+    section > h2::after {
+      content: '⚙️';
+      font-style: normal;
+      font-size: 0.9em;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      /* Removes grayscale for colored emoji, or filters it if you want it monochromatic */
+      filter: grayscale(100%) opacity(0.6); 
+    }
+
+    section > h2:hover::after {
+      opacity: 1;
+      animation: spin 4s linear infinite;
     }
 
     /* ── Entry rows ───────────────────────────── */
-    .entry { margin-bottom: 1.2rem; }
+    .entry { margin-bottom: 1.5rem; }
     .entry:last-child { margin-bottom: 0; }
 
     .entry-header {
@@ -174,57 +225,75 @@
       align-items: baseline;
       flex-wrap: wrap;
       gap: .25rem;
-      margin-bottom: .15rem;
+      margin-bottom: .2rem;
     }
 
     .entry-title {
       font-weight: 500;
-      font-size: .92rem;
+      font-size: .95rem;
       color: var(--ink);
     }
 
     .entry-org {
-      font-size: .82rem;
+      font-size: .85rem;
       color: var(--muted);
     }
 
     .entry-date {
-      font-size: .78rem;
-      color: var(--muted);
+      font-family: var(--font-mono);
+      font-size: .70rem;
+      color: var(--accent);
       white-space: nowrap;
     }
 
     .entry ul {
-      padding-left: 1.1rem;
-      margin-top: .4rem;
+      padding-left: 1.2rem;
+      margin-top: .5rem;
       display: flex;
       flex-direction: column;
-      gap: .3rem;
+      gap: .4rem;
     }
 
     .entry ul li {
-      font-size: .83rem;
+      font-size: .85rem;
       color: #3a3530;
       line-height: 1.55;
     }
 
-    /* ── Achievements two-column grid ─────────── */
+    /* ── Achievements two-column grid (Cards) ─── */
     .cert-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: .75rem 1.5rem;
+      gap: 1rem 1.5rem;
     }
 
-    .cert-item { display: flex; flex-direction: column; gap: .1rem; }
+    .cert-item { 
+      display: flex; 
+      flex-direction: column; 
+      gap: .2rem; 
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 1rem;
+      background: var(--bg);
+      transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .cert-item:hover {
+      background: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+      border-color: var(--accent);
+    }
 
     .cert-name {
       font-weight: 500;
-      font-size: .83rem;
+      font-size: .85rem;
       color: var(--ink);
     }
 
     .cert-meta {
-      font-size: .75rem;
+      font-family: var(--font-mono);
+      font-size: .7rem;
       color: var(--muted);
     }
 
@@ -243,6 +312,8 @@
     @media print {
       body { background: #fff; }
       .page { box-shadow: none; margin: 0; max-width: 100%; border-radius: 0; }
+      .cert-item { border-color: var(--rule); box-shadow: none; transform: none; }
+      section > h2::after { display: none; }
     }
   </style>
 </head>
@@ -250,10 +321,8 @@
 <body>
   <div class="page">
 
-    <!-- ── Sidebar ── -->
     <aside>
       <div class="profile-wrap">
-        <!-- Shows fallback initials if profile.jpg is unavailable -->
         <img
           src="profile.jpg"
           alt="Amal Benny"
@@ -274,10 +343,10 @@
 
       <div class="sidebar-section">
         <p class="sidebar-label">Contact</p>
-        <p><a href="tel:+917012009357">(+91) 701 200 9357</a></p>
-        <p><a href="mailto:amalb1883@gmail.com">amalb1883@gmail.com</a></p>
-        <p><a href="https://alyod.tech/" target="_blank" rel="noopener noreferrer">alyod.tech</a></p>
-        <p><a href="https://linkedin.com/in/amal-benny" target="_blank" rel="noopener noreferrer">linkedin.com/in/amal-benny</a></p>
+        <p><a href="tel:+917012009357"> <i class="bi bi-telephone"></i>(+91) 701 200 9357</a></p>
+        <p><a href="mailto:amalb1883@gmail.com"> <i class="bi bi-envelope"></i>amalb1883@gmail.com</a></p>
+        <p><a href="https://alyod.tech/" target="_blank" rel="noopener noreferrer"> <i class="bi bi-link"></i>alyod.tech</a></p>
+        <p><a href="https://linkedin.com/in/amal-benny" target="_blank" rel="noopener noreferrer"> <i class="bi bi-linkedin"></i>linkedin.com/in/amal-benny</a></p>
       </div>
 
       <div class="sidebar-section">
@@ -292,14 +361,13 @@
           <span class="skill-tag" role="listitem">Community Service</span>
           <span class="skill-tag" role="listitem">Empathy</span>
           <span class="skill-tag" role="listitem">Discipline</span>
+          <span class="skill-tag" role="listitem">AI Tools</span>
         </div>
       </div>
     </aside>
 
-    <!-- ── Main ── -->
     <main>
 
-      <!-- Education -->
       <section aria-labelledby="edu-heading">
         <h2 id="edu-heading">Education</h2>
 
@@ -328,14 +396,13 @@
         </div>
       </section>
 
-      <!-- Experience -->
       <section aria-labelledby="exp-heading">
         <h2 id="exp-heading">Experience</h2>
 
         <div class="entry">
           <div class="entry-header">
             <span class="entry-title">Google Product Expert</span>
-            <span class="entry-date">Feb 2021 – Dec 2022 &nbsp;·&nbsp; Sep 2024 – Dec 2025</span>
+            <span class="entry-date">Feb 2021 – Dec 2022 &DoubleVerticalBar; Sep 2024 – Dec 2025</span>
           </div>
           <p class="entry-org">Google Chrome Community</p>
           <ul>
@@ -379,7 +446,6 @@
         </div>
       </section>
 
-      <!-- Achievements & Certifications -->
       <section aria-labelledby="cert-heading">
         <h2 id="cert-heading">Achievements &amp; Certifications</h2>
         <div class="cert-grid">
