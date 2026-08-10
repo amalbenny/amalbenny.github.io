@@ -1,0 +1,76 @@
+AMAL BENNY — SEO KEYWORD & CONTENT PLAN
+
+Primary keywords
+- Amal Benny
+- Amal Benny mechanical engineer
+- Amal Benny engineer
+- Mechanical Engineering graduate Kerala
+- Mechanical engineer portfolio
+- Mechanical engineering portfolio
+
+Secondary keywords
+- Google Product Expert
+- Google Chrome Product Expert
+- CAD engineer
+- SolidWorks
+- SolidWorks workshop
+- CAD based prototype design
+- mechanical design
+- prototype design
+- Python for engineers
+- C programming
+- responsive web design
+- product usability
+- user experience feedback
+- technical community volunteer
+- engineering student portfolio
+- engineering graduate portfolio
+- Kerala mechanical engineer
+- APJ Abdul Kalam Technological University mechanical engineering
+
+Long-tail keywords
+- mechanical engineering graduate portfolio in Kerala
+- mechanical engineer with CAD and SolidWorks skills
+- mechanical engineer with Google Product Expert experience
+- entry level mechanical engineer portfolio
+- mechanical engineering graduate skilled in Python and CAD
+- SolidWorks and prototype design portfolio
+- engineering graduate interested in product and technology
+
+Recommended homepage title
+Amal Benny | Mechanical Engineer & Google Product Expert
+
+Recommended meta description
+Portfolio of Amal Benny, a Mechanical Engineering graduate with experience as a Google Product Expert, CAD, SolidWorks, Python, web design, and technical community volunteering.
+
+Suggested URL structure
+/
+ /about
+ /experience
+ /skills
+ /credentials
+ /contact
+
+SEO content recommendations
+1. Add 2–4 substantial project case studies. Projects will give the site much stronger search relevance than a resume-only page.
+2. Add links to verified project demos, GitHub, LinkedIn, certificates, or engineering work where available.
+3. Add a dedicated Projects page with descriptive headings such as “SolidWorks Prototype Design” rather than generic labels.
+4. Keep the main target phrase “Amal Benny” in the title, H1, description, and About section naturally.
+5. Avoid keyword stuffing. Use related engineering, CAD, product, and software terms naturally.
+6. Add a real canonical domain once the site is deployed.
+7. Create a sitemap.xml and robots.txt at deployment.
+8. Add Organization/Person structured data with only information you are comfortable publishing publicly.
+
+Resume review — quick take
+Strengths:
+- Strong differentiator: Mechanical Engineering + Google Product Expert experience.
+- Good mix of technical skills, product/user experience exposure, and community involvement.
+- Certifications show continued learning in Python, C, web design, Kotlin, and SolidWorks.
+
+Highest-impact improvements:
+- Add a short 2–3 line professional summary to the resume.
+- Add measurable outcomes to the Google Product Expert experience where possible.
+- Add 2–4 engineering/software projects with tools, problem, your contribution, and result.
+- Clarify the exact status of the B.Tech degree (graduated June 2026 if accurate).
+- Keep dates and role naming consistent across LinkedIn, resume, and website.
+- Add GitHub/project links if available.
